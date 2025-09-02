@@ -45,17 +45,30 @@ public class matrix_chain {
             }
         }
 
-        for (int i = 0; i < s.length; i++) {
-            for (int j = 0; j < s.length; j++) {
-                System.out.print(m[i][j] + " ");
+
+        int[][] m1 = new int[4][4];
+        int[][] s1 = new int[4][4];
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                m1[i][j] = m[i+1][j+1];
+                s1[i][j] = s[i+1][j+1];
+            }
+        }
+
+
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(m1[i][j] + " ");
             }
             System.out.println();
         }
         System.out.println("\n\n\n");
 
-        for (int i = 0; i < s.length; i++) {
-            for (int j = 0; j < s.length; j++) {
-                System.out.print(s[i][j] + " ");
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(s1[i][j] + " ");
             }
             System.out.println();
         }
